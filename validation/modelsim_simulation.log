@@ -1,0 +1,32 @@
+# vsim -c -l simulation.log work.tb_npu -do "onbreak {quit -code 1 -force}; onerror {quit -code 1 -force}; run -all; quit -code 0 -force" 
+# Start time: 11:04:34 on Sep 30,2026
+# Loading sv_std.std
+# Loading work.tb_npu
+# Loading work.npu_pkg
+# Loading work.npu_top
+# Loading work.ai_axi_slave
+# Loading work.npu_controller
+# Loading work.config_check
+# Loading work.axi_read_master
+# Loading work.axi_write_master
+# Loading work.input_a_buffer
+# Loading work.input_b_buffer
+# Loading work.bias_buffer
+# Loading work.output_buffer
+# Loading work.compute_engine
+# Loading work.mac_array
+# Loading work.vector_alu
+# Loading work.relu_unit
+# Loading work.max_pool_unit
+# Loading work.interrupt_controller
+# Loading work.int8_unpacker
+# onbreak {quit -code 1 -force}
+#  Warning: onbreak command for use within macro
+#  onerror {quit -code 1 -force}
+#  Warning: onerror command for use within macro
+#  run -all
+# PASS: 19 jobs, all seven opcodes, stalls, errors, IRQ and 4KB splitting
+# ** Note: $finish    : C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/tb/tb_npu.sv(1086)
+#    Time: 50040 ns  Iteration: 1  Instance: /tb_npu
+# End time: 11:04:37 on Sep 30,2026, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0

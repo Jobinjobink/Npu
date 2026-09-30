@@ -1,0 +1,246 @@
+Analysis & Elaboration report for npu
+Wed Sep 30 11:19:57 2026
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Wed Sep 30 11:19:57 2026       ;
+; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                 ; npu                                         ;
+; Top-level Entity Name         ; npu_top                                     ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                           ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; npu_top            ; npu                ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                             ; 2                  ;                    ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Copyright (C) 2018  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details.
+    Info: Processing started: Wed Sep 30 11:03:41 2026
+Info: Command: quartus_map --analysis_and_elaboration --read_settings_files=on --write_settings_files=off npu -c npu
+Info (20032): Parallel compilation is enabled and will use up to 2 processors
+Info (12021): Found 1 design units, including 0 entities, in source file /users/admin/documents/codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/npu_pkg.sv
+    Info (12022): Found design unit 1: npu_pkg (SystemVerilog) File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/npu_pkg.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/documents/codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/int8_unpacker.sv
+    Info (12023): Found entity 1: int8_unpacker File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/int8_unpacker.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/documents/codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/mac_array.sv
+    Info (12023): Found entity 1: mac_array File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/mac_array.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/documents/codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/vector_alu.sv
+    Info (12023): Found entity 1: vector_alu File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/vector_alu.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/documents/codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/relu_unit.sv
+    Info (12023): Found entity 1: relu_unit File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/relu_unit.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/documents/codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/max_pool_unit.sv
+    Info (12023): Found entity 1: max_pool_unit File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/max_pool_unit.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/documents/codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/input_a_buffer.sv
+    Info (12023): Found entity 1: input_a_buffer File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/input_a_buffer.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/documents/codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/input_b_buffer.sv
+    Info (12023): Found entity 1: input_b_buffer File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/input_b_buffer.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/documents/codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/bias_buffer.sv
+    Info (12023): Found entity 1: bias_buffer File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/bias_buffer.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/documents/codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/output_buffer.sv
+    Info (12023): Found entity 1: output_buffer File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/output_buffer.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/documents/codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/interrupt_controller.sv
+    Info (12023): Found entity 1: interrupt_controller File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/interrupt_controller.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/documents/codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/config_check.sv
+    Info (12023): Found entity 1: config_check File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/config_check.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/documents/codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/ai_axi_slave.sv
+    Info (12023): Found entity 1: ai_axi_slave File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/ai_axi_slave.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/documents/codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/axi_read_master.sv
+    Info (12023): Found entity 1: axi_read_master File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/axi_read_master.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/documents/codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/axi_write_master.sv
+    Info (12023): Found entity 1: axi_write_master File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/axi_write_master.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/documents/codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/npu_controller.sv
+    Info (12023): Found entity 1: npu_controller File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/npu_controller.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/documents/codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/compute_engine.sv
+    Info (12023): Found entity 1: compute_engine File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/compute_engine.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/admin/documents/codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/npu_top.sv
+    Info (12023): Found entity 1: npu_top File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/npu_top.sv Line: 3
+Info (12127): Elaborating entity "npu_top" for the top level hierarchy
+Info (12128): Elaborating entity "ai_axi_slave" for hierarchy "ai_axi_slave:regs" File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/npu_top.sv Line: 99
+Warning (10762): Verilog HDL Case Statement warning at ai_axi_slave.sv(51): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/ai_axi_slave.sv Line: 51
+Warning (10762): Verilog HDL Case Statement warning at ai_axi_slave.sv(121): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/ai_axi_slave.sv Line: 121
+Info (12128): Elaborating entity "npu_controller" for hierarchy "npu_controller:control" File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/npu_top.sv Line: 105
+Info (10264): Verilog HDL Case Statement information at npu_controller.sv(36): all case item expressions in this case statement are onehot File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/npu_controller.sv Line: 36
+Info (12128): Elaborating entity "config_check" for hierarchy "npu_controller:control|config_check:checker_inst" File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/npu_controller.sv Line: 23
+Warning (10762): Verilog HDL Case Statement warning at config_check.sv(23): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/config_check.sv Line: 23
+Info (12128): Elaborating entity "axi_read_master" for hierarchy "axi_read_master:reader" File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/npu_top.sv Line: 125
+Info (12128): Elaborating entity "axi_write_master" for hierarchy "axi_write_master:writer" File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/npu_top.sv Line: 148
+Info (12128): Elaborating entity "input_a_buffer" for hierarchy "input_a_buffer:a_buffer" File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/npu_top.sv Line: 150
+Info (12128): Elaborating entity "input_b_buffer" for hierarchy "input_b_buffer:b_buffer" File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/npu_top.sv Line: 151
+Info (12128): Elaborating entity "bias_buffer" for hierarchy "bias_buffer:bias_mem" File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/npu_top.sv Line: 152
+Info (12128): Elaborating entity "output_buffer" for hierarchy "output_buffer:c_buffer" File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/npu_top.sv Line: 154
+Info (12128): Elaborating entity "compute_engine" for hierarchy "compute_engine:compute" File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/npu_top.sv Line: 159
+Info (10264): Verilog HDL Case Statement information at compute_engine.sv(130): all case item expressions in this case statement are onehot File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/compute_engine.sv Line: 130
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "a_bytes" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "b_bytes" into its bus
+Info (12128): Elaborating entity "int8_unpacker" for hierarchy "compute_engine:compute|int8_unpacker:operand_lane[0].au" File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/compute_engine.sv Line: 40
+Info (12128): Elaborating entity "mac_array" for hierarchy "compute_engine:compute|mac_array:mac" File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/compute_engine.sv Line: 47
+Info (12128): Elaborating entity "vector_alu" for hierarchy "compute_engine:compute|vector_alu:alu" File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/compute_engine.sv Line: 48
+Info (12128): Elaborating entity "relu_unit" for hierarchy "compute_engine:compute|relu_unit:relu" File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/compute_engine.sv Line: 49
+Info (12128): Elaborating entity "max_pool_unit" for hierarchy "compute_engine:compute|max_pool_unit:pool" File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/compute_engine.sv Line: 51
+Info (12128): Elaborating entity "interrupt_controller" for hierarchy "interrupt_controller:interrupt_inst" File: C:/Users/Admin/Documents/Codex/2026-09-30/referenced-chatgpt-conversation-this-is-an/outputs/npu_lite/rtl/npu_top.sv Line: 162
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 6534 megabytes
+    Info: Processing ended: Wed Sep 30 11:20:13 2026
+    Info: Elapsed time: 00:16:32
+    Info: Total CPU time (on all processors): 00:05:54
+
+
